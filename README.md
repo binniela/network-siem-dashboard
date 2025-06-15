@@ -11,7 +11,8 @@ This project is a PCAP file analyzer. It is built using Next.js and relies on `t
 - Upload and analyze `.pcap` files directly from a browser  
 - Simple dashboard interface  
 - Uses `tshark` for fast and reliable packet capture analysis  
-- Built with Next.js for modern performance and scalability  
+- Built with Next.js for modern performance and scalability
+- API geolocation integration to display IP addresses on an interactive map   
 
 ---
 
