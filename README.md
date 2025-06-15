@@ -1,91 +1,34 @@
-SIEM Dashboard PCAP Analyzer
-This project is a SIEM (Security Information and Event Management) Dashboard that includes a PCAP file analyzer.
-It is built using Next.js and requires tshark (the command-line version of Wireshark) for PCAP analysis.
+# SIEM Dashboard PCAP Analyzer
 
-Prerequisites
-Before you begin, ensure you have the following installed:
+![Dashboard GIF](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDl1OXZnZmxzYzBwaG5raHJvMnN5anV0YnduaGM2Mm12bGxwZzdtaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f4V2mqvv0wT9m/giphy.gif)
 
-Node.js (version 14 or later)
+This project is a **Security Information and Event Management (SIEM) Dashboard** that includes a PCAP file analyzer. It is built using **Next.js** and relies on **tshark**, the command-line version of Wireshark, to parse PCAP files for analysis.
 
-npm (usually comes with Node.js)
+---
 
-tshark (command-line Wireshark tool)
+## 🖥️ Features
 
-Installation
-Clone the repository:
+- Upload and analyze `.pcap` files directly from a browser  
+- Simple dashboard interface  
+- Uses `tshark` for fast and reliable packet capture analysis  
+- Built with Next.js for modern performance and scalability  
 
-bash
-Copy
-Edit
+---
+
+## ⚙️ Prerequisites
+
+Make sure the following are installed:
+
+- [Node.js](https://nodejs.org/) (v14+)  
+- `npm` (comes with Node.js)  
+- `tshark` (command-line version of Wireshark)  
+
+---
+
+## 📦 Installation
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/yourusername/siem-dashboard.git
 cd siem-dashboard
-Install dependencies:
-
-bash
-Copy
-Edit
-npm install
-Install tshark:
-
-On Ubuntu/Debian:
-
-bash
-Copy
-Edit
-sudo apt-get update
-sudo apt-get install tshark
-On macOS (using Homebrew):
-
-bash
-Copy
-Edit
-brew install wireshark
-On Windows:
-Download and install Wireshark from the official website.
-
-Configuration
-Create a next.config.js file in the root directory with the following content:
-
-javascript
-Copy
-Edit
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  experimental: {
-    serverComponentsExternalPackages: ['child_process', 'fs', 'path', 'util'],
-  },
-}
-
-module.exports = nextConfig
-Ensure that the app/api/analyze/route.ts file exists and contains the PCAP analysis code.
-
-Usage
-Start the development server:
-
-bash
-Copy
-Edit
-npm run dev
-Open your browser and navigate to:
-
-arduino
-Copy
-Edit
-http://localhost:3000
-Use the file upload form to select and analyze PCAP files.
-
-Important Notes
-The current implementation limits file uploads to 10MB. You can adjust this limit in the route.ts file.
-
-Make sure tshark is properly installed and accessible from your system's command line.
-
-This is a basic implementation; consider adding security measures before deploying in production.
-
-Troubleshooting
-Permission issues with tshark:
-Ensure the user running the Next.js server has permission to execute tshark.
-
-"Command not found" errors:
-Verify tshark is installed and included in your system’s PATH environment variable.
