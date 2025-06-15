@@ -33,5 +33,35 @@ Ensure you have the following installed:
 
 git clone https://github.com/yourusername/siem-dashboard.git
 cd siem-dashboard
+```
+## Installation & Setup (Terminal Commands)
 
-## Install Dependencies
+
+# Clone the repo
+```bash
+git clone https://github.com/yourusername/siem-dashboard.git
+cd siem-dashboard
+```
+# Install dependencies
+```bash
+npm install
+```
+# Install tshark
+```bash
+# For Ubuntu/Debian
+sudo apt-get update
+sudo apt-get install tshark
+```
+# For macOS
+```bash
+brew install wireshark
+```
+# For Windows
+```bash
+# Download Wireshark from: https://www.wireshark.org/download.html
+# Ensure tshark is added to your system's PATH during install
+```
+# Start the development server
+```bash
+npm run dev
+```
